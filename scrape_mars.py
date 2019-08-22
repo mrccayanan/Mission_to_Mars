@@ -20,7 +20,7 @@ def scrape():
 
     nasa = "https://mars.nasa.gov/news/"
     browser.visit(nasa)
-    time.sleep(2)
+    time.sleep(1)
 
     html = browser.html
     soup = bs(html,"html.parser")
@@ -86,6 +86,7 @@ def scrape():
    # #### Mars Hemisperes
     url_hemisphere = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
     browser.visit(url_hemisphere)
+    time.sleep(2)
 
 #     #Getting the base url
 #     hemisphere_base_url = "{0.scheme}://{0.netloc}/".format(urlsplit(url_hemisphere))
@@ -165,6 +166,9 @@ def scrape():
     valles_marineris = {"image title":valles_marineris_title, "image url": valles_marineris_img_url}
     #hemisphere_img_urls.append(valles_marineris)
     
+    End_url = "https://vignette.wikia.nocookie.net/looneytunes/images/e/e1/All.jpg/revision/latest?cb=20150313020828"
+    browser.visit(End_url)
+    time.sleep(5)
     browser.quit()
 
     #mars_facts_data["hemisphere_img_url"] = hemisphere_img_urls
