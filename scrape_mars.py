@@ -166,6 +166,7 @@ def scrape():
     valles_marineris = {"image title":valles_marineris_title, "image url": valles_marineris_img_url}
     #hemisphere_img_urls.append(valles_marineris)
     
+    # Thats All Folks
     End_url = "https://vignette.wikia.nocookie.net/looneytunes/images/e/e1/All.jpg/revision/latest?cb=20150313020828"
     browser.visit(End_url)
     time.sleep(5)
